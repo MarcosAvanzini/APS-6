@@ -22,7 +22,7 @@ while True:
 
         melhor_resultado = np.argmin(distancia)
         if resultados[melhor_resultado]:
-            nomes = nomes_faces[melhor_resultado]
+            nome = nomes_faces[melhor_resultado]
         else:
             nome = "desconhecido"
 
