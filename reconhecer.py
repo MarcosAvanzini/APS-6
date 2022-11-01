@@ -1,3 +1,4 @@
+from webbrowser import Opera
 from xml.sax.handler import feature_namespaces
 import face_recognition as fr
 
@@ -15,14 +16,19 @@ def cria_rostos():
     faces_conhecidas = []
     nomes_faces = []
 
-    Marcos1 = reconhece_rosto("APSREAL\imagens\Marcos1.jpg")
-    if (Marcos1[0]):
-        faces_conhecidas.append(Marcos1[1][0])
-        nomes_faces.append("Marcos1")
+    Administrador = reconhece_rosto("APSREAL\imagens\Marcos1.jpg")
+    if (Administrador[0]):
+        faces_conhecidas.append(Administrador[1][0])
+        nomes_faces.append("Administrador")
 
-    Marcos2 = reconhece_rosto("APSREAL\imagens\Marcos2.jpg")
-    if (Marcos2[0]):
-        faces_conhecidas.append(Marcos2[1][0])
-        nomes_faces.append("Marcos2")
+    Operario = reconhece_rosto("APSREAL\imagens\Marcos2.jpg")
+    if (Operario[0]):
+        faces_conhecidas.append(Operario[1][0])
+        nomes_faces.append("Operario")
     
+    Gerente = reconhece_rosto("APSREAL\imagens\Marcos2.jpg")
+    if (Gerente[0]):
+        faces_conhecidas.append(Gerente[1][0])
+        nomes_faces.append("Gerente")
+
     return faces_conhecidas, nomes_faces

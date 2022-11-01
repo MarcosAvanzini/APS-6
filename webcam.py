@@ -23,6 +23,12 @@ while True:
         melhor_resultado = np.argmin(distancia)
         if resultados[melhor_resultado]:
             nome = nomes_faces[melhor_resultado]
+            if nome == "Administrador":
+                print("Acesso concedido ao Adminstrador")
+            if nome == "Operario":
+                print("Acesso concedido ao Operario")
+            if nome == "Gerente":
+                print("Acesso concedido ao Gerente")
         else:
             nome = "desconhecido"
 
