@@ -1,5 +1,3 @@
-from tkinter import font
-from turtle import left, right
 import numpy as np
 import face_recognition as fr
 import cv2
@@ -7,7 +5,7 @@ from reconhecer import cria_rostos
 
 faces_conhecidos, nomes_faces = cria_rostos()
 
-captura_video = cv2.VideoCapture(0)
+captura_video = cv2.VideoCapture(1)
 while True:
     ret, frame = captura_video.read()
     rgb_frame = frame [:,:,::-1]
@@ -36,9 +34,9 @@ while True:
         cv2.rectangle(frame, (left,top), (right,bottom),(0,0,255), 2)
 
         cv2.rectangle(frame, (left,bottom - 35), (right,bottom),(0,0,255), cv2.FILLED)
-        font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
+        fonte = cv2.FONT_HERSHEY_DUPLEX
 
-        cv2.putText(frame, nome, (left + 6, bottom - 6),font,1.0,(255,255,255), 1)
+        cv2.putText(frame, nome, (left + 7, bottom - 7),fonte,0.55,(255,255,255), 1)
 
         cv2.imshow('Webcam_facerecognition', frame)
     
